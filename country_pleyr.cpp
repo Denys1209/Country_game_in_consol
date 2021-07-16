@@ -215,7 +215,7 @@ void country_pleyr::menu_hired_troops()
 			{
 				std::cout << "How many unit do you want to buy" << std::endl;
 				std::cin >> count;
-				if (ALL_UNIT[number_fabric - 1].get_price() * count > this->money) {
+				if (ALL_UNIT[number_fabric - 1].get_price() * count < this->money) {
 					this->buy_unit(ALL_UNIT[number_fabric - 1], count);
 					break;
 				}
